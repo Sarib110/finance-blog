@@ -1,0 +1,152 @@
+<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 sm:py-16 relative overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-20 animate-float"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-20 animate-float floating-delay-1"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header with modern design -->
+    <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+      <div class="inline-block mb-6">
+        <span class="px-6 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 rounded-full text-sm font-bold shadow-modern">
+          Articles
+        </span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        <span class="gradient-text-blue">
+          {{ selectedCategory ? selectedCategory : 'All Articles' }}
+        </span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+        Discover expert insights on budgeting, investment strategies, and digital finance
+      </p>
+    </div>
+
+    <!-- Category Filter with modern buttons -->
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 sm:mb-16" data-aos="fade-up" data-aos-delay="100">
+      <button
+        (click)="filterByCategory(null)"
+        [class]="selectedCategory === null 
+          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 sm:px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-110 shadow-modern-lg hover:shadow-glow-lg' 
+          : 'bg-white text-gray-700 px-6 sm:px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-modern hover:shadow-modern-lg'"
+      >
+        All Articles
+      </button>
+      <button
+        *ngFor="let category of categories"
+        (click)="filterByCategory(category)"
+        [class]="selectedCategory === category 
+          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 sm:px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-110 shadow-modern-lg hover:shadow-glow-lg' 
+          : 'bg-white text-gray-700 px-6 sm:px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-modern hover:shadow-modern-lg'"
+      >
+        {{ category }}
+      </button>
+    </div>
+
+    <!-- Loading State with modern animation -->
+    <div *ngIf="isLoading" class="text-center py-20">
+      <div class="inline-block relative">
+        <div class="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin-slow"></div>
+        <div class="absolute inset-0 w-16 h-16 border-4 border-transparent border-r-indigo-600 rounded-full animate-spin" style="animation-duration: 1.5s;"></div>
+      </div>
+      <p class="mt-6 text-gray-600 font-semibold animate-pulse">Loading articles...</p>
+    </div>
+
+    <!-- Blog Posts Grid with modern cards -->
+    <div *ngIf="!isLoading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <article
+        *ngFor="let post of filteredPosts; let i = index"
+        [routerLink]="['/blog', post.slug]"
+        class="card-hover bg-white rounded-2xl shadow-modern overflow-hidden cursor-pointer group relative"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-delay]="i * 150"
+      >
+        <!-- Gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/10 group-hover:to-indigo-500/10 transition-all duration-500 z-10"></div>
+
+        <!-- Image with modern effects -->
+        <div class="relative h-56 overflow-hidden">
+          <img
+            [src]="post.imageUrl || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800'"
+            [alt]="post.title"
+            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-125"
+          >
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <!-- Shimmer effect -->
+          <div class="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Category badge -->
+          <div class="absolute top-4 left-4 z-20">
+            <span [class]="'px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-md ' + getCategoryColor(post.category)">
+              {{ post.category }}
+            </span>
+          </div>
+
+          <!-- Reading time badge -->
+          <div class="absolute bottom-4 right-4 z-20 glass-dark px-3 py-1.5 rounded-full text-xs font-bold text-white backdrop-blur-md">
+            {{ post.readTime }} min
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-6 sm:p-8 relative z-10">
+          <div class="flex items-center text-sm text-gray-500 mb-4 gap-2">
+            <span class="font-semibold">{{ post.publishedDate | date:'MMM d, y' }}</span>
+            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
+            <span>{{ post.readTime }} min read</span>
+          </div>
+          
+          <h2 class="text-2xl font-bold text-gray-900 mb-4 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+            {{ post.title }}
+          </h2>
+          
+          <p class="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
+            {{ post.excerpt }}
+          </p>
+
+          <!-- Author with animation -->
+          <div class="flex items-center justify-between pt-6 border-t border-gray-200 group-hover:border-blue-200 transition-colors duration-300">
+            <div class="flex items-center space-x-3 group-hover:space-x-4 transition-all duration-300">
+              <div class="relative">
+                <img
+                  [src]="post.authorAvatar || 'https://ui-avatars.com/api/?name=' + post.author"
+                  [alt]="post.author"
+                  class="w-12 h-12 rounded-full ring-2 ring-gray-200 group-hover:ring-blue-500 transition-all duration-300"
+                >
+                <div class="absolute inset-0 rounded-full bg-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-gray-900">{{ post.author }}</p>
+                <p class="text-xs text-gray-500">Finance Expert</p>
+              </div>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-gray-100 group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-indigo-600 flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-[-5deg] shadow-modern group-hover:shadow-glow">
+              <svg class="w-5 h-5 text-gray-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Empty State with modern design -->
+    <div *ngIf="!isLoading && filteredPosts.length === 0" class="text-center py-20 animate-scale-in">
+      <div class="inline-block p-6 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl mb-6">
+        <svg class="w-24 h-24 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold text-gray-900 mb-3">No articles found</h3>
+      <p class="text-gray-600 mb-8">Try selecting a different category.</p>
+      <button
+        (click)="filterByCategory(null)"
+        class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-110 shadow-modern-lg"
+      >
+        View All Articles
+      </button>
+    </div>
+  </div>
+</div>

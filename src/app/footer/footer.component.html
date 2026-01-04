@@ -1,0 +1,86 @@
+<footer class="bg-gray-900 text-gray-300 mt-16 sm:mt-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+      <!-- About Section -->
+      <div>
+        <h3 class="text-white text-lg font-bold mb-4">Finance Blog</h3>
+        <p class="text-sm leading-relaxed">
+          Your trusted source for budgeting, investment strategies, and digital finance. Empowering you to make informed financial decisions.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a routerLink="/" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Home</a>
+          </li>
+          <li>
+            <a routerLink="/blog" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">All Articles</a>
+          </li>
+          <li>
+            <a routerLink="/about" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">About</a>
+          </li>
+          <li>
+            <a routerLink="/contact" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Contact</a>
+          </li>
+          <li>
+            <a routerLink="/privacy" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Privacy & Policy</a>
+          </li>
+          <li>
+            <a routerLink="/blog" [queryParams]="{category: 'Budgeting'}" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Budgeting</a>
+          </li>
+          <li>
+            <a routerLink="/blog" [queryParams]="{category: 'Investment'}" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Investment</a>
+          </li>
+          <li>
+            <a routerLink="/blog" [queryParams]="{category: 'Digital Finance'}" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Digital Finance</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div>
+        <h3 class="text-white text-lg font-bold mb-4">Categories</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a routerLink="/blog" [queryParams]="{category: 'Budgeting'}" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Budgeting</a>
+          </li>
+          <li>
+            <a routerLink="/blog" [queryParams]="{category: 'Investment'}" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Investment</a>
+          </li>
+          <li>
+            <a routerLink="/blog" [queryParams]="{category: 'Digital Finance'}" class="hover:text-white transition-all duration-200 transform hover:translate-x-1 inline-block">Digital Finance</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact/Newsletter -->
+      <div>
+        <h3 class="text-white text-lg font-bold mb-4">Stay Updated</h3>
+        <p class="text-sm mb-4">Subscribe to our newsletter for the latest financial insights and tips.</p>
+        <div class="flex flex-col space-y-2">
+          <input 
+            type="email" 
+            placeholder="Your email address" 
+            class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+          >
+          <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 text-sm font-semibold shadow-md hover:shadow-lg">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm">&copy; {{ currentYear }} Finance Blog. All rights reserved.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white transition-all duration-200 text-sm">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-all duration-200 text-sm">Terms of Service</a>
+        <a href="#" class="hover:text-white transition-all duration-200 text-sm">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>

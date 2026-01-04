@@ -1,0 +1,357 @@
+<!-- Hero Section with Advanced Animations -->
+<section class="hero-section text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+  <!-- Background Image/Video -->
+  <div class="absolute inset-0 z-0">
+    <!-- You can replace this with a video tag for animated video -->
+    <!-- <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video> -->
+    <!-- Background Image with overlay -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80');">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/80 to-indigo-900/80"></div>
+    </div>
+  </div>
+  
+  <!-- Floating animated elements -->
+  <div class="absolute inset-0 overflow-hidden z-0">
+    <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-float opacity-20"></div>
+    <div class="absolute bottom-20 right-20 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-float floating-delay-1 opacity-20"></div>
+    <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-purple-500 rounded-full blur-3xl animate-float floating-delay-2 opacity-15"></div>
+  </div>
+
+  <!-- Grid pattern overlay -->
+  <div class="absolute inset-0 opacity-10 z-0" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+  
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 z-10 relative" data-aos="fade-up" data-aos-duration="1200">
+    <div class="text-center max-w-5xl mx-auto">
+      <!-- Animated badge -->
+      <div class="mb-8 animate-slide-in-up" data-aos="fade-down" data-aos-delay="200">
+        <span class="glass px-6 py-2 rounded-full text-sm font-semibold backdrop-blur-md text-white border border-white/40 bg-white/20" style="text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+          🚀 Trusted by 10,000+ Financial Enthusiasts
+        </span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-4 animate-slide-in-up text-white" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.3);" data-aos="zoom-in" data-aos-delay="300">
+        Master Your Financial Future
+      </h1>
+      
+      <p class="text-lg sm:text-xl md:text-2xl mb-10 text-white leading-relaxed px-4 max-w-3xl mx-auto animate-slide-in-up" style="text-shadow: 0 2px 15px rgba(0,0,0,0.4), 0 1px 5px rgba(0,0,0,0.3);" data-aos="fade-up" data-aos-delay="400">
+        Expert insights on Budgeting, Investment strategies, and Digital Finance to help you build wealth and achieve financial freedom.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 animate-scale-in" data-aos="zoom-in" data-aos-delay="500">
+        <a routerLink="/blog" class="btn-modern bg-white text-blue-900 px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-110 shadow-modern-lg hover:shadow-glow-lg relative overflow-hidden group">
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            Explore Articles
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </span>
+        </a>
+        <a href="#featured" class="btn-modern glass border-2 border-white/50 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg hover:bg-white/20 hover:border-white transition-all duration-300 transform hover:scale-110 backdrop-blur-md relative overflow-hidden group">
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            Learn More
+            <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="grid grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto animate-slide-in-up" data-aos="fade-up" data-aos-delay="600">
+        <div class="glass rounded-2xl p-4 backdrop-blur-md border border-white/30 bg-white/10">
+          <div class="text-3xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">500+</div>
+          <div class="text-sm text-white mt-1 font-semibold">Articles</div>
+        </div>
+        <div class="glass rounded-2xl p-4 backdrop-blur-md border border-white/30 bg-white/10">
+          <div class="text-3xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">50K+</div>
+          <div class="text-sm text-white mt-1 font-semibold">Readers</div>
+        </div>
+        <div class="glass rounded-2xl p-4 backdrop-blur-md border border-white/30 bg-white/10">
+          <div class="text-3xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">100+</div>
+          <div class="text-sm text-white mt-1 font-semibold">Experts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float" data-aos="fade-up" data-aos-delay="700">
+    <div class="flex flex-col items-center gap-2 text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+      <span class="text-sm font-semibold">Scroll to explore</span>
+      <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Articles Section with Modern Cards -->
+<section id="featured" class="py-20 sm:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden" *ngIf="featuredPosts.length > 0">
+  <!-- Background decoration -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2"></div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="inline-block mb-4">
+        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Featured</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        <span class="gradient-text-blue">Featured Articles</span>
+      </h2>
+      <p class="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Must-read articles curated by our expert team to help you make smarter financial decisions
+      </p>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <article
+        *ngFor="let post of featuredPosts; let i = index"
+        [routerLink]="['/blog', post.slug]"
+        class="card-hover bg-white rounded-2xl shadow-modern overflow-hidden cursor-pointer group relative"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-delay]="i * 150"
+      >
+        <!-- Gradient overlay on hover -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/10 group-hover:to-indigo-500/10 transition-all duration-500 z-10"></div>
+        
+        <!-- Image with overlay effect -->
+        <div class="relative h-64 overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+          <img
+            [src]="post.imageUrl || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800'"
+            [alt]="post.title"
+            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-125"
+          >
+          <!-- Shimmer effect on hover -->
+          <div class="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Category badge with glow -->
+          <div class="absolute top-6 left-6 z-20">
+            <span [class]="'px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-md ' + getCategoryColor(post.category)">
+              {{ post.category }}
+            </span>
+          </div>
+
+          <!-- Reading time badge -->
+          <div class="absolute bottom-6 right-6 z-20 glass-dark px-3 py-1 rounded-full text-xs font-semibold text-white backdrop-blur-md">
+            {{ post.readTime }} min read
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-6 sm:p-8 relative z-10">
+          <div class="flex items-center text-sm text-gray-500 mb-4 gap-2">
+            <span class="font-medium">{{ post.publishedDate | date:'MMM d, y' }}</span>
+            <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+            <span>{{ post.readTime }} min</span>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+            {{ post.title }}
+          </h3>
+          
+          <p class="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
+            {{ post.excerpt }}
+          </p>
+
+          <!-- Author with animation -->
+          <div class="flex items-center justify-between pt-6 border-t border-gray-200">
+            <div class="flex items-center space-x-3 group-hover:space-x-4 transition-all duration-300">
+              <div class="relative">
+                <img
+                  [src]="post.authorAvatar || 'https://ui-avatars.com/api/?name=' + post.author"
+                  [alt]="post.author"
+                  class="w-12 h-12 rounded-full ring-2 ring-gray-200 group-hover:ring-blue-500 transition-all duration-300"
+                >
+                <div class="absolute inset-0 rounded-full bg-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-gray-900">{{ post.author }}</p>
+                <p class="text-xs text-gray-500">Finance Expert</p>
+              </div>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-gray-100 group-hover:bg-blue-600 flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-[-5deg]">
+              <svg class="w-5 h-5 text-gray-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Animated Content Section with Modern Cards -->
+<section class="py-20 sm:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+  <!-- Animated background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-1/4 left-0 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-20 animate-float"></div>
+    <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-20 animate-float floating-delay-1"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        Why Choose <span class="gradient-text-blue">Our Finance Blog?</span>
+      </h2>
+      <p class="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Stay ahead with cutting-edge financial insights and practical advice from industry experts
+      </p>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Card 1 with advanced animations -->
+      <div class="card-hover bg-white rounded-2xl shadow-modern p-8 sm:p-10 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+        <!-- Gradient background on hover -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        <div class="relative z-10">
+          <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-glow group-hover:shadow-glow-lg">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">Budgeting</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Master the art of budgeting with practical strategies to track expenses, save money, and achieve your financial goals effectively.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="card-hover bg-white rounded-2xl shadow-modern p-8 sm:p-10 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        <div class="relative z-10">
+          <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-glow group-hover:shadow-glow-lg">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors duration-300">Investment</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Learn smart investment strategies to grow your wealth, build portfolios, and secure your financial future with expert guidance.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="card-hover bg-white rounded-2xl shadow-modern p-8 sm:p-10 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        <div class="relative z-10">
+          <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-glow group-hover:shadow-glow-lg">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">Digital Finance</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Navigate the digital finance landscape with expert guidance on cryptocurrencies, digital wallets, and online investment platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Articles Section with Modern Design -->
+<section class="py-20 sm:py-24 bg-white relative overflow-hidden" *ngIf="recentPosts.length > 0">
+  <!-- Background decoration -->
+  <div class="absolute top-0 left-0 w-full h-full opacity-5">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6" data-aos="fade-up">
+      <div>
+        <div class="inline-block mb-4">
+          <span class="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-semibold">Latest</span>
+        </div>
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          <span class="gradient-text-blue">Latest Articles</span>
+        </h2>
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl">
+          Stay updated with our most recent financial insights and expert analysis
+        </p>
+      </div>
+      <a routerLink="/blog" class="btn-modern bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-110 shadow-modern-lg hover:shadow-glow-lg relative overflow-hidden group">
+        <span class="relative z-10 flex items-center gap-2">
+          View All
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <article
+        *ngFor="let post of recentPosts; let i = index"
+        [routerLink]="['/blog', post.slug]"
+        class="card-hover bg-white rounded-2xl shadow-modern overflow-hidden cursor-pointer border border-gray-100 group relative"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-delay]="i * 150"
+      >
+        <!-- Gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:to-indigo-500/5 transition-all duration-500 z-10"></div>
+
+        <!-- Image -->
+        <div class="relative h-56 overflow-hidden">
+          <img
+            [src]="post.imageUrl || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800'"
+            [alt]="post.title"
+            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-125"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <div class="absolute top-4 left-4 z-20">
+            <span [class]="'px-3 py-1.5 rounded-full text-xs font-bold shadow-lg backdrop-blur-md ' + getCategoryColor(post.category)">
+              {{ post.category }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-6 relative z-10">
+          <div class="flex items-center text-sm text-gray-500 mb-3 gap-2">
+            <span class="font-medium">{{ post.publishedDate | date:'MMM d, y' }}</span>
+            <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+            <span>{{ post.readTime }} min</span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+            {{ post.title }}
+          </h3>
+          
+          <p class="text-gray-600 mb-4 line-clamp-2 text-sm leading-relaxed">
+            {{ post.excerpt }}
+          </p>
+
+          <!-- Author -->
+          <div class="flex items-center space-x-3 pt-4 border-t border-gray-100 group-hover:border-blue-200 transition-colors duration-300">
+            <img
+              [src]="post.authorAvatar || 'https://ui-avatars.com/api/?name=' + post.author"
+              [alt]="post.author"
+              class="w-10 h-10 rounded-full ring-2 ring-gray-200 group-hover:ring-blue-500 transition-all duration-300"
+            >
+            <div>
+              <p class="text-sm font-bold text-gray-900">{{ post.author }}</p>
+              <p class="text-xs text-gray-500">Finance Expert</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-12 md:hidden">
+      <a routerLink="/blog" class="btn-modern bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-110 shadow-modern-lg inline-block">
+        View All Articles
+      </a>
+    </div>
+  </div>
+</section>

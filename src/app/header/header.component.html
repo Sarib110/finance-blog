@@ -1,0 +1,162 @@
+<header class="bg-white/80 backdrop-blur-xl shadow-modern sticky top-0 z-50 border-b border-gray-200/50 transition-all duration-300" id="header">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo with animation -->
+      <a routerLink="/" class="flex items-center space-x-3 text-2xl font-bold text-blue-900 hover:text-blue-700 transition-all duration-300 hover:scale-105 group">
+        <div class="relative">
+          <img src="assets/logo.png" alt="Finance Blog Logo" class="h-10 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+          <div class="absolute inset-0 bg-blue-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation with modern effects -->
+      <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
+        <a 
+          routerLink="/" 
+          routerLinkActive="text-blue-600 font-semibold" 
+          [routerLinkActiveOptions]="{exact: true}" 
+          class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative py-2 px-4 rounded-lg group"
+        >
+          <span class="relative z-10">Home</span>
+          <span class="absolute inset-0 bg-blue-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-3/4 transition-all duration-300"></span>
+        </a>
+        <a 
+          routerLink="/blog" 
+          routerLinkActive="text-blue-600 font-semibold" 
+          class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative py-2 px-4 rounded-lg group"
+        >
+          <span class="relative z-10">All Articles</span>
+          <span class="absolute inset-0 bg-blue-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-3/4 transition-all duration-300"></span>
+        </a>
+        <a 
+          routerLink="/blog" 
+          [queryParams]="{category: 'Budgeting'}" 
+          class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative py-2 px-4 rounded-lg group"
+        >
+          <span class="relative z-10">Budgeting</span>
+          <span class="absolute inset-0 bg-blue-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-3/4 transition-all duration-300"></span>
+        </a>
+        <a 
+          routerLink="/blog" 
+          [queryParams]="{category: 'Investment'}" 
+          class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative py-2 px-4 rounded-lg group"
+        >
+          <span class="relative z-10">Investment</span>
+          <span class="absolute inset-0 bg-blue-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-3/4 transition-all duration-300"></span>
+        </a>
+        <a 
+          routerLink="/about" 
+          class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative py-2 px-4 rounded-lg group"
+        >
+          <span class="relative z-10">About</span>
+          <span class="absolute inset-0 bg-blue-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-3/4 transition-all duration-300"></span>
+        </a>
+        <a 
+          routerLink="/contact" 
+          class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative py-2 px-4 rounded-lg group"
+        >
+          <span class="relative z-10">Contact</span>
+          <span class="absolute inset-0 bg-blue-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-3/4 transition-all duration-300"></span>
+        </a>
+        <a 
+          routerLink="/blog" 
+          [queryParams]="{category: 'Digital Finance'}" 
+          class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative py-2 px-4 rounded-lg group"
+        >
+          <span class="relative z-10">Digital Finance</span>
+          <span class="absolute inset-0 bg-blue-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-3/4 transition-all duration-300"></span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button with animation -->
+      <button 
+        class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-110"
+        (click)="toggleMenu()"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6 transition-transform duration-300" [class.rotate-90]="isMenuOpen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation with slide animation -->
+    <div 
+      *ngIf="isMenuOpen" 
+      class="md:hidden mt-4 pb-4 border-t border-gray-200 animate-slide-in-up"
+    >
+      <div class="flex flex-col space-y-2 pt-4">
+        <a 
+          routerLink="/" 
+          (click)="closeMenu()" 
+          routerLinkActive="text-blue-600 font-semibold bg-blue-50" 
+          [routerLinkActiveOptions]="{exact: true}" 
+          class="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 rounded-lg py-3 px-4 transform hover:translate-x-2"
+        >
+          Home
+        </a>
+        <a 
+          routerLink="/blog" 
+          (click)="closeMenu()" 
+          routerLinkActive="text-blue-600 font-semibold bg-blue-50" 
+          class="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 rounded-lg py-3 px-4 transform hover:translate-x-2"
+        >
+          All Articles
+        </a>
+        <a 
+          routerLink="/blog" 
+          [queryParams]="{category: 'Budgeting'}" 
+          (click)="closeMenu()" 
+          class="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 rounded-lg py-3 px-4 transform hover:translate-x-2"
+        >
+          Budgeting
+        </a>
+        <a 
+          routerLink="/blog" 
+          [queryParams]="{category: 'Investment'}" 
+          (click)="closeMenu()" 
+          class="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 rounded-lg py-3 px-4 transform hover:translate-x-2"
+        >
+          Investment
+        </a>
+        <a 
+          routerLink="/blog" 
+          [queryParams]="{category: 'Digital Finance'}" 
+          (click)="closeMenu()" 
+          class="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 rounded-lg py-3 px-4 transform hover:translate-x-2"
+        >
+          Digital Finance
+        </a>
+        <a 
+          routerLink="/about" 
+          (click)="closeMenu()" 
+          class="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 rounded-lg py-3 px-4 transform hover:translate-x-2"
+        >
+          About
+        </a>
+        <a 
+          routerLink="/contact" 
+          (click)="closeMenu()" 
+          class="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 rounded-lg py-3 px-4 transform hover:translate-x-2"
+        >
+          Contact
+        </a>
+        <a 
+          routerLink="/privacy" 
+          (click)="closeMenu()" 
+          class="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-300 rounded-lg py-3 px-4 transform hover:translate-x-2"
+        >
+          Privacy & Policy
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
